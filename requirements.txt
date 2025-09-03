@@ -1,0 +1,10 @@
+langchain>=0.2.14
+langchain-community>=0.2.12
+langchain-openai>=0.1.22
+langchain-mongodb>=0.1.6
+pymongo>=4.8.0
+pypdf>=4.2.0
+python-dotenv>=1.0.1
+langsmith>=0.1.97
+streamlit>=1.37.0
+faiss-cpu>=1.7.4

@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: rag-app
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run app.py --server.port=$PORT --server.address=0.0.0.0
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.12
+      - key: VECTORSTORE
+        value: ATLAS
+      - key: EMBEDDINGS
+        value: OPENAI
+      - key: LLM_PROVIDER
+        value: OPENAI
+      - key: OPENAI_MODEL
+        value: gpt-4o-mini
+      - key: HF_EMBEDDINGS_MODEL
+        value: text-embedding-3-small
+      - key: MONGODB_DB
+        value: rag_demo
+      - key: MONGODB_COLLECTION
+        value: documents
+      - key: MONGODB_ATLAS_INDEX_NAME
+        value: vector_index
+
+
+
